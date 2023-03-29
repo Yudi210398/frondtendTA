@@ -1,0 +1,29 @@
+.margin-bottom {
+  margin-top: 0px;
+}
+
+.dataNama {
+  text-transform: uppercase;
+  font-weight: bolder;
+  line-height: 20px;
+  font-size: 18px;
+}
+
+.alamat {
+  font-size: 18px;
+}
+
+.list {
+  text-transform: uppercase;
+  margin-top: 40px;
+  line-height: 22px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.topm {
+  margin-top: 10px;
+}
+
+.hr {
+  margin-top: 20px;
+}

@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Fredoka+One&family=Permanent+Marker&display=swap");
+
+.clickWarna {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+@media (min-width: 500px) {
+  .gambar-margin {
+    margin-top: 50px;
+  }
+  .btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .texts {
+    margin-top: 40px;
+    margin-left: 40px;
+  }
+  h1 {
+    font-family: "Acme", sans-serif;
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .rupiah {
+    font-size: 40px;
+    color: brown;
+  }
+
+  .w-100 {
+    height: 400px;
+    margin-top: 40px;
+  }
+  .buttonkeranjang {
+    margin-left: -85px;
+  }
+}
+
+@media (min-width: 768px) {
+  .gambar-margin {
+    margin-top: 50px;
+  }
+
+  .texts {
+    margin-top: 20px;
+    margin-left: 40px;
+  }
+  h1 {
+    font-family: "Acme", sans-serif;
+    font-size: 26px;
+    line-height: 35px;
+  }
+
+  .rupiah {
+    font-size: 35px;
+    color: brown;
+    margin-bottom: 10px;
+  }
+
+  .w-100 {
+    height: 400px;
+    margin-top: 40px;
+  }
+  .buttonkeranjang {
+    margin-left: -190px;
+  }
+}
+
+@media (min-width: 992px) {
+  .gambar-margin {
+    margin-top: 50px;
+  }
+
+  .texts {
+    margin-top: 110px;
+    margin-left: 40px;
+  }
+  h1 {
+    font-family: "Acme", sans-serif;
+    font-size: 26px;
+    line-height: 35px;
+  }
+
+  .rupiah {
+    font-size: 35px;
+    color: brown;
+  }
+
+  .w-100 {
+    height: 400px;
+    margin-top: 40px;
+  }
+  .warna-text {
+    font-family: "Acme", sans-serif;
+  }
+  .col-3 {
+    margin-top: 5px;
+  }
+  h1,
+  .rupiah,
+  .warna-text {
+    margin-bottom: 15px;
+  }
+  .margins-tombol-order {
+    margin-top: 10px;
+  }
+  .buttonkeranjang {
+    margin-left: -55px;
+  }
+}
+
+.inputs {
+  width: 20%;
+  display: inline;
+  margin-left: 65px;
+}

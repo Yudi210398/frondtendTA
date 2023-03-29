@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Baloo+2&family=Bungee+Spice&family=Fredoka+One&family=Permanent+Marker&family=Yellowtail&display=swap");
+
+.marginTop {
+  margin-top: 100px;
+}
+
+.cart {
+  font-family: "Yellowtail", cursive;
+  text-align: justify;
+  font-size: large;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.cartList {
+  margin-top: 40px;
+  font-family: "Times New Roman", Times, serif;
+  text-align: justify;
+  font-size: large;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.gambar {
+  margin-top: 20px;
+}
+
+.totalbarang {
+  font-family: "Permanent Marker", cursive;
+  text-transform: uppercase;
+}
+
+.harga {
+  font-family: "Fredoka One", cursive;
+  font-style: italic;
+  color: red;
+}
+
+.up {
+  margin-top: 20px;
+}
+
+.qtybtn {
+  margin-right: 10px;
+}
+
+.datas {
+  margin-top: -20px;
+}

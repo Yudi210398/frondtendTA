@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Baloo+2&family=Fredoka+One&family=Permanent+Marker&display=swap");
+
+@media (min-width: 768px) {
+  .activeds:hover {
+    background-color: aqua;
+  }
+
+  .actives {
+    background-color: rgb(195, 241, 241);
+  }
+
+  .nav-link {
+    font-family: "Baloo 2", cursive;
+  }
+}
+
+@media (min-width: 500px) {
+  .nav-link {
+    font-family: "Baloo 2", cursive;
+    margin-left: 10px;
+  }
+
+  .activeds:hover {
+    background-color: aqua;
+  }
+
+  .actives {
+    background-color: rgb(195, 241, 241);
+  }
+}

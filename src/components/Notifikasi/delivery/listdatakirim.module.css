@@ -1,0 +1,18 @@
+.list {
+  line-height: 20px;
+  text-transform: capitalize;
+  text-align: justify;
+}
+
+.gambar:hover {
+  cursor: pointer;
+  border: rgb(223, 67, 67) 1px solid;
+}
+
+.rowMargin {
+  margin-bottom: 50px;
+}
+
+.garisBawah {
+  margin-bottom: 100px;
+}

@@ -1,0 +1,20 @@
+.center {
+  padding: 20px;
+  font-family: arial;
+  font-size: 24px;
+  margin: auto;
+  width: 650px;
+  height: 570px;
+}
+
+.rounded {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+.bukti {
+  font-size: 14px;
+}
+
+
+/* formik.errors.photo */

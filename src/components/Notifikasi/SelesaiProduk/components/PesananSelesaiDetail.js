@@ -13,7 +13,6 @@ export const PesananSelesaiDetail = () => {
   const fixProduk = getData?.detailProduk;
   const orderShemas = getData?.orderShemas;
   const datess = orderShemas?.tanggal.split("GMT")[0].trim();
-  console.log(datess);
   return (
     <Container>
       <h1 className={classes.marginTop}>DETAIL PESANAN SELESAI</h1>

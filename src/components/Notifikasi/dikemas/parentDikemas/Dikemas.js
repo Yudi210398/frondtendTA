@@ -27,6 +27,7 @@ function Dikemas() {
               file={datas}
               dataArray={hasilData}
               dataAsli={data}
+              selesaiData={false}
             />
           ))}
       </Container>

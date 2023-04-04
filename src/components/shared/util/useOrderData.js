@@ -18,7 +18,7 @@ export function useOrderData(urllink) {
           {
             "Content-Type": "application/json",
             Authorization: `Dog ${token.tokenLogin}`,
-          },
+          }
         );
         setData(hasil || []);
         return hasil;
@@ -26,7 +26,7 @@ export function useOrderData(urllink) {
       fetch();
     }, [sendRequest, token.tokenLogin, urllink]);
   } catch (err) {
-    console.log();
+    console.log(err);
   }
 
   return {

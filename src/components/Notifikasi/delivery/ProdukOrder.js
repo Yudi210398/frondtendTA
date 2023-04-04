@@ -13,7 +13,6 @@ const ProdukOrder = () => {
   const { getData } = useOrderProdukId(_idprodukorder);
   const fixProduk = getData?.detailProduk;
   const orderShemas = getData?.orderShemas;
-  console.log(orderShemas?._id);
   return (
     <Container>
       <h1 className={classes.marginTop}>DETAIL PRODUK ORDERS</h1>

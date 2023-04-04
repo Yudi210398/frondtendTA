@@ -97,7 +97,6 @@ function AllCart(props) {
 
         {dataQty.length > 0 &&
           dataQty.map((data, i) => {
-            console.log(data);
             return (
               <ListCart
                 produkIds={data._id}

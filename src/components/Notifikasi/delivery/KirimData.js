@@ -8,7 +8,6 @@ const KirimData = ({ file }) => {
   const data = file || [];
   const [modalShow, setModalShow] = useState(false);
   const { fetch } = useProdukOrderHttp();
-
   return (
     <Fragment>
       <div className={`row ${classes.rowMargin}`}>
@@ -63,6 +62,7 @@ const KirimData = ({ file }) => {
             fungsiYes={() => {
               fetch(data?._id);
             }}
+            idorder={data?._id}
             keluar={"Pesanan Diterima"}
           />
         </div>

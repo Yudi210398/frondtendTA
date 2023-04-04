@@ -105,13 +105,13 @@ function App() {
     //       Authorization: `Dog ${token?.tokenLogin}`,
     //     }
     //   );
-    //   console.log(hasil1);
+    //   (hasil1);
     // };
 
     // fetch();
   }, [onLogin, onData, onTransaksi, transaksi, sendRequest, tokenLogin]);
 
-  // console.log(data);
+  // (data);
   let route;
 
   if (userId) {
@@ -139,16 +139,7 @@ function App() {
         />
         ;
         <Route path="/notif" element={<Notifikasi />} />;
-        <Route
-          path="*"
-          element={
-            <Navigate
-              to="/orderprodukdetailselesai/:_idprodukorderselesai"
-              replace
-            />
-          }
-        />
-        ;
+        <Route path="*" element={<Navigate to="/allProduct" replace />} />;
       </Fragment>
     );
   } else {

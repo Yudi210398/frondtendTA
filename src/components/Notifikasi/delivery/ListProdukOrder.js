@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 
 const ListProdukOrder = ({ produks }) => {
-  console.log(produks);
   return (
     <Fragment>
       <div className="row ">

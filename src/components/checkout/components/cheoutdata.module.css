@@ -21,9 +21,15 @@
 }
 
 .topm {
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .hr {
   margin-top: 20px;
+}
+
+.marginLists {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+  margin-top: 30px;
 }

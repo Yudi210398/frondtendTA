@@ -10,7 +10,11 @@ function AllProduk(props) {
       <Container>
         <div className="row justify-content-center">
           {props.items.length === 0 && (
-            <h1 className="text-center">Data Tidak Ada</h1>
+            <div className="d-flex justify-content-center">
+              <div className="spinner-border" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+            </div>
           )}
           {props.items.length > 0 &&
             props.items?.map((data) => (

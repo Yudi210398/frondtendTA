@@ -10,7 +10,7 @@ function AllProduk(props) {
       <Container>
         <div className="row justify-content-center">
           {props.items.length === 0 && (
-            <div className="d-flex justify-content-center">
+            <div className="d-flex     justify-content-center">
               <div className="spinner-border" role="status">
                 <span className="visually-hidden">Loading...</span>
               </div>

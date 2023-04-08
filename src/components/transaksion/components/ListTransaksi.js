@@ -1,4 +1,4 @@
-import React, { Fragment, useRef } from "react";
+import React, { Fragment, useRef, useState } from "react";
 import { currency } from "../../produk/cart/components/AllCart";
 import bca from "../../shared/logo/bca.png";
 import classes from "./listCaed.module.css";
@@ -10,7 +10,9 @@ import TextError from "../../shared/FormikUseable/TextError";
 import { useSelector } from "react-redux";
 import { useHttp } from "../../shared/util/http-hook";
 import { useNavigate } from "react-router-dom";
+import ModalAPiLoad from "../../shared/ModalAPiLoad/ModalAPiLoad";
 function ListTransaksi({ data, totalHarga }) {
+  const [modalShow, setModalShow] = useState(false);
   const navigate = useNavigate();
   const token = useSelector((state) => state.login);
   const { sendRequest } = useHttp();
@@ -37,6 +39,7 @@ function ListTransaksi({ data, totalHarga }) {
 
   const onSubmit = async (values) => {
     try {
+      setModalShow(true);
       const formData = new FormData();
       formData.append("buktiTranfer", values.photo);
 
@@ -50,12 +53,17 @@ function ListTransaksi({ data, totalHarga }) {
       );
       alert("Data Sudah di Upload");
       navigate("/notif", { replace: true });
+      setModalShow(false);
     } catch (err) {
       console.log(err);
     }
   };
   return (
     <Fragment>
+      <ModalAPiLoad
+        show={modalShow}
+        labelmodal="Tolong Jangan Refresh Halaman !!!"
+      />
       <div className={classes.center}>
         <div className="row ">
           <div className="col-3">

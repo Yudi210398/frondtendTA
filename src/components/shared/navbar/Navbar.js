@@ -6,22 +6,9 @@ import logo from "../logo/logo.png";
 import { useSelector } from "react-redux";
 import "./navbar.css";
 import Logout from "../../auth/logout/Logout";
-import { FaSearch } from "react-icons/fa";
-import { Formik, Form } from "formik";
-import FormikControl from "../FormikUseable/FormikControl";
-import * as Yup from "yup";
+
+import FormikPencarian from "../FormikUseable/FormikPencarian";
 function Navbars() {
-  const initialValues = {
-    dataPencarian: "",
-  };
-
-  const validationSchema = Yup.object({
-    dataPencarian: Yup.string().required("Penting Harus di isi"),
-  });
-  const onSubmit = async (values) => {
-    console.log(values);
-  };
-
   const dataId = useSelector((state) => state.login.userId);
   const [show, setShow] = useState(false);
   const [showAuth, setShowAuth] = useState(false);
@@ -101,53 +88,7 @@ function Navbars() {
                     Jas
                   </NavLink>
                 </NavDropdown>
-                <div style={{ display: "flex", flexDirection: "row" }}>
-                  <Formik
-                    initialValues={initialValues}
-                    validationSchema={validationSchema}
-                    onSubmit={onSubmit}
-                  >
-                    {(formik) => {
-                      return (
-                        <Form className="pencari-data">
-                          <FormikControl
-                            control="input"
-                            type="text"
-                            name="dataPencarian"
-                            placeholder="Pencarian Barang"
-                            toucheds={formik.touched.dataPencarian?.toString()}
-                            pencarian="cari"
-                            error={formik.errors.dataPencarian}
-                          />
-                          <div class="button-container">
-                            <button className="tombol-transparant">
-                              <FaSearch
-                                type="submit"
-                                className="seach-icon"
-                                id="seach-icon"
-                              />
-                            </button>
-                          </div>
-                        </Form>
-                      );
-                    }}
-                  </Formik>
-                </div>
-
-                {/* <div className="form-outline">
-                  <input
-                    type="search"
-                    id="form1"
-                    className="form-control icon-data"
-                    placeholder="Pencarian Barang"
-                  />
-                </div>
-
-                <FaSearch
-                  className="seach-icon"
-                  id="seach-icon"
-                  onClick={() => alert("dat")}
-                /> */}
+                <FormikPencarian />
               </Nav>
 
               <Nav>
@@ -262,6 +203,7 @@ function Navbars() {
                     Jas
                   </NavLink>
                 </NavDropdown>
+                <FormikPencarian />
               </Nav>
 
               <Nav>

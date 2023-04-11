@@ -15,7 +15,6 @@ export function useEffectProduct() {
       };
       fetch();
     }, [sendRequest]);
-    console.log(getData);
   } catch (err) {
     console.log(err.message);
     throw err.message;

@@ -28,3 +28,36 @@
     background-color: rgb(195, 241, 241);
   }
 }
+
+.seach-icon {
+  margin-top: 6px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.icon-data {
+  margin-left: 10px;
+}
+
+.pencari-data {
+  margin-top: -25px;
+  margin-left: 10px;
+}
+
+.tombol-transparant {
+  background-color: transparent;
+  border: none;
+  color: #000000; /*ganti warna teks sesuai kebutuhan*/
+  text-decoration: underline; /*opsional, menambahkan garis bawah pada teks*/
+  cursor: pointer;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.button-container {
+  margin-left: 10px;
+}

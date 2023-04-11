@@ -63,7 +63,7 @@ function ListTransaksi({ data, totalHarga }) {
       <ModalAPiLoad
         show={modalShow}
         labelmodal="Tolong Jangan Refresh Halaman !!!"
-      />
+         />
       <div className={classes.center}>
         <div className="row ">
           <div className="col-3">

@@ -97,6 +97,15 @@ function Navbars() {
                     Jas
                   </NavLink>
                 </NavDropdown>
+
+                {/* <div className="form-outline">
+                  <input
+                    type="search"
+                    id="form1"
+                    className="form-control"
+                    placeholder="Pencarian Barang"
+                  />
+                </div> */}
               </Nav>
 
               <Nav>

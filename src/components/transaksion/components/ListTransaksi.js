@@ -28,12 +28,12 @@ function ListTransaksi({ data, totalHarga }) {
       .test(
         "FILE_SIZE",
         "File terlalu besar",
-        (value) => !value || (value && value.size <= 1024 * 1024)
+        (value) => !value || (value && value.size <= 1024 * 1024),
       )
       .test(
         "FILE_FORMAT",
         "Format tidak sesuai, harus gambar",
-        (value) => !value || (value && FORMATIMAGES.includes(value?.type))
+        (value) => !value || (value && FORMATIMAGES.includes(value?.type)),
       ),
   });
 
@@ -49,7 +49,7 @@ function ListTransaksi({ data, totalHarga }) {
         formData,
         {
           Authorization: `Dog ${token.tokenLogin}`,
-        }
+        },
       );
       alert("Data Sudah di Upload");
       navigate("/notif", { replace: true });

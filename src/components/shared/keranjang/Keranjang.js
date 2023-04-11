@@ -23,10 +23,10 @@ function Keranjang() {
             {
               "Content-Type": "application/json",
               Authorization: `Dog ${token.tokenLogin}`,
-            }
+            },
           ),
           await sendRequest(
-            `${process.env.REACT_APP_BACKEND_URL_API}/allproduct`
+            `${process.env.REACT_APP_BACKEND_URL_API}/allproduct`,
           ),
         ]);
         return hasil;

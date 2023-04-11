@@ -6,34 +6,38 @@ import logo from "../logo/logo.png";
 import { useSelector } from "react-redux";
 import "./navbar.css";
 import Logout from "../../auth/logout/Logout";
+import { FaSearch } from "react-icons/fa";
+import { Formik, Form } from "formik";
+import FormikControl from "../FormikUseable/FormikControl";
+import * as Yup from "yup";
 function Navbars() {
+  const initialValues = {
+    dataPencarian: "",
+  };
+
+  const validationSchema = Yup.object({
+    dataPencarian: Yup.string().required("Penting Harus di isi"),
+  });
+  const onSubmit = async (values) => {
+    console.log(values);
+  };
+
   const dataId = useSelector((state) => state.login.userId);
   const [show, setShow] = useState(false);
   const [showAuth, setShowAuth] = useState(false);
   const [profile, setProfile] = useState(false);
 
-  const showDropdown = (e) => {
-    setShow(!show);
-  };
-  const hideDropdown = (e) => {
-    setShow(false);
-  };
+  const showDropdown = (e) => setShow(!show);
 
-  const showDropdownAuth = (e) => {
-    setShowAuth(!showAuth);
-  };
+  const hideDropdown = (e) => setShow(false);
 
-  const hideDropdownAuth = (e) => {
-    setShowAuth(false);
-  };
+  const showDropdownAuth = (e) => setShowAuth(!showAuth);
 
-  const showDropdownProfile = (e) => {
-    setProfile(!showAuth);
-  };
+  const hideDropdownAuth = (e) => setShowAuth(false);
 
-  const hideDropdownProfile = (e) => {
-    setProfile(false);
-  };
+  const showDropdownProfile = (e) => setProfile(!showAuth);
+
+  const hideDropdownProfile = (e) => setProfile(false);
 
   let navbarss;
 
@@ -97,15 +101,53 @@ function Navbars() {
                     Jas
                   </NavLink>
                 </NavDropdown>
+                <div style={{ display: "flex", flexDirection: "row" }}>
+                  <Formik
+                    initialValues={initialValues}
+                    validationSchema={validationSchema}
+                    onSubmit={onSubmit}
+                  >
+                    {(formik) => {
+                      return (
+                        <Form className="pencari-data">
+                          <FormikControl
+                            control="input"
+                            type="text"
+                            name="dataPencarian"
+                            placeholder="Pencarian Barang"
+                            toucheds={formik.touched.dataPencarian?.toString()}
+                            pencarian="cari"
+                            error={formik.errors.dataPencarian}
+                          />
+                          <div class="button-container">
+                            <button className="tombol-transparant">
+                              <FaSearch
+                                type="submit"
+                                className="seach-icon"
+                                id="seach-icon"
+                              />
+                            </button>
+                          </div>
+                        </Form>
+                      );
+                    }}
+                  </Formik>
+                </div>
 
                 {/* <div className="form-outline">
                   <input
                     type="search"
                     id="form1"
-                    className="form-control"
+                    className="form-control icon-data"
                     placeholder="Pencarian Barang"
                   />
-                </div> */}
+                </div>
+
+                <FaSearch
+                  className="seach-icon"
+                  id="seach-icon"
+                  onClick={() => alert("dat")}
+                /> */}
               </Nav>
 
               <Nav>

@@ -50,7 +50,7 @@ function Login() {
         JSON.stringify({ email: values.email, password: values.password }),
         {
           "Content-Type": "application/json",
-        }
+        },
       );
       onLogin(hasilss.token, hasilss.userId, hasilss.keranjang);
 
@@ -63,7 +63,7 @@ function Login() {
           keranjang: hasilss.keranjang,
           waktuExpied: tokenExpirationDate,
           totalhargaKeranjanglength: hasilss.keranjang.length,
-        })
+        }),
       );
       navigate("/allProduct", { replace: true });
     } catch (err) {

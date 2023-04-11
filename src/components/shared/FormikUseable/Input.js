@@ -3,24 +3,25 @@ import { Field, ErrorMessage } from "formik";
 import TextError from "./TextError";
 import "./input.css";
 function Input(props) {
-  const { label, name, classnew, ...rest } = props;
+  const { label, name, classnew, pencarian, ...rest } = props;
   return (
     <div className="bungkus">
       <label className="margin" htmlFor={name}>
         {label}
       </label>
-
       <Field
         id={name}
         name={name}
         {...rest}
         className={
-          rest.error && rest?.toucheds
+          rest.error && rest?.toucheds && pencarian !== "cari"
             ? `border border-danger form-control ${classnew}`
             : `form-control ${classnew}`
         }
       />
-      <ErrorMessage component={TextError} name={name} />
+      {pencarian !== "cari" && (
+        <ErrorMessage component={TextError} name={name} />
+      )}
     </div>
   );
 }

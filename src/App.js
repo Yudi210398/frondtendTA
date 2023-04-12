@@ -25,6 +25,7 @@ import Notifikasi from "./components/Notifikasi/ParentNotifikasi/Notifikasi.js";
 import { useHttp } from "./components/shared/util/http-hook.js";
 import ProdukOrder from "./components/Notifikasi/delivery/ProdukOrder.js";
 import { PesananSelesaiDetail } from "./components/Notifikasi/SelesaiProduk/components/PesananSelesaiDetail.js";
+import { ProdukCari } from "./components/produk/DataCari/ProdukCari.js";
 
 // import { useState } from "react";
 // import { useHttp } from "./components/shared/util/http-hook.js";
@@ -132,6 +133,7 @@ function App() {
           path="/orderprodukdetail/:_idprodukorder"
           element={<ProdukOrder />}
         />
+        <Route path="/produkCari" element={<ProdukCari />} />
         ;
         <Route
           path="/orderprodukdetailselesai/:_idprodukorderselesai"
@@ -158,6 +160,7 @@ function App() {
           path="/orderprodukdetail/:_idprodukorder"
           element={<ProdukOrder />}
         />
+        <Route path="/produkCari" element={<ProdukCari />} />
         <Route
           path="/orderprodukdetailselesai/:_idprodukorderselesai"
           element={<PesananSelesaiDetail />}

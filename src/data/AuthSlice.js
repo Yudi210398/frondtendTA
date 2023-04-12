@@ -10,6 +10,7 @@ const authSlice = createSlice({
     totalhargaKeranjang: 0,
     totalhargaKeranjanglength: 0,
     transaksi: null,
+    dataPencarian: [],
   },
   reducers: {
     isLogin: (state, action) => {
@@ -21,6 +22,9 @@ const authSlice = createSlice({
       state.tokenLogin = null;
       state.userId = null;
       state.keranjang = 0;
+    },
+    isDataPencarian: (state, action) => {
+      state.dataPencarian = action.payload.dataPencarian;
     },
 
     isSelekasiCart: (state, action) => {
@@ -54,5 +58,6 @@ export const {
   isTotalHargaKeranjang,
   isTransaksi,
   isTotalHargaKeranjangLength,
+  isDataPencarian,
 } = authSlice.actions;
 export default authSlice.reducer;

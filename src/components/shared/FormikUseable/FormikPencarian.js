@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { Formik, Form } from "formik";
 import FormikControl from "../FormikUseable/FormikControl";
 import * as Yup from "yup";
 import { useHttp } from "../util/http-hook";
-const FormikPencarian = () => {
-  const [hasil, setHasil] = useState(null);
+import { useDispatch } from "react-redux";
+import { isDataPencarian } from "../../../data/AuthSlice";
+import { useNavigate } from "react-router-dom";
+const FormikPencarian = (props) => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const onDataCari = (dataPencarian) =>
+    dispatch(isDataPencarian({ dataPencarian }));
+
   const { sendRequest } = useHttp();
   const initialValues = {
     dataPencarian: "",
@@ -20,8 +27,11 @@ const FormikPencarian = () => {
         JSON.stringify({ datanya: values.dataPencarian }),
         {
           "Content-Type": "application/json",
-        },
+        }
       );
+      props.onDataCari(hasilss);
+      onDataCari(hasilss.dataBarang);
+      navigate("/produkCari", { replace: true });
     } catch (err) {
       console.log(err);
     }

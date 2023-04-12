@@ -13,6 +13,10 @@ function Navbars() {
   const [show, setShow] = useState(false);
   const [showAuth, setShowAuth] = useState(false);
   const [profile, setProfile] = useState(false);
+  const [data, setData] = useState("");
+  const handledata = (data) => {
+    setData(data);
+  };
 
   const showDropdown = (e) => setShow(!show);
 
@@ -27,7 +31,7 @@ function Navbars() {
   const hideDropdownProfile = (e) => setProfile(false);
 
   let navbarss;
-
+  console.log(data, `pasti`);
   if (dataId) {
     navbarss = (
       <Fragment>
@@ -88,7 +92,7 @@ function Navbars() {
                     Jas
                   </NavLink>
                 </NavDropdown>
-                <FormikPencarian />
+                <FormikPencarian onDataCari={handledata} />
               </Nav>
 
               <Nav>
@@ -203,7 +207,7 @@ function Navbars() {
                     Jas
                   </NavLink>
                 </NavDropdown>
-                <FormikPencarian />
+                <FormikPencarian onDataCari={handledata} />
               </Nav>
 
               <Nav>

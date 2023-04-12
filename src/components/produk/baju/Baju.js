@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { useEffectProduct } from "../../shared/util/useEffect-http.js";
 import AllProduk from "../allProduct/components/AllProduk.js";
+import { useSelector } from "react-redux";
 
 /* 
 
@@ -21,12 +22,15 @@ const acak = merge
 */
 
 function Baju() {
+  const { dataPencarian } = useSelector((state) => state.login);
+
+  console.log(dataPencarian, `goblok`);
   const { getData } = useEffectProduct();
 
   const dataFilterKemeja = getData.filter(
     (data) => data.jenisPakaian === "kemeja"
   );
-
+  console.log(dataFilterKemeja);
   return (
     <Fragment>
       <br />

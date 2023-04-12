@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form } from "formik";
 import FormikControl from "../FormikUseable/FormikControl";
 import * as Yup from "yup";
+import { useHttp } from "../util/http-hook";
 const FormikPencarian = () => {
+  const [hasil, setHasil] = useState(null);
+  const { sendRequest } = useHttp();
   const initialValues = {
     dataPencarian: "",
   };
@@ -10,7 +13,18 @@ const FormikPencarian = () => {
     dataPencarian: Yup.string().required("Penting Harus di isi"),
   });
   const onSubmit = async (values) => {
-    console.log(values);
+    try {
+      const hasilss = await sendRequest(
+        `${process.env.REACT_APP_BACKEND_URL_API}/caridata`,
+        "POST",
+        JSON.stringify({ datanya: values.dataPencarian }),
+        {
+          "Content-Type": "application/json",
+        },
+      );
+    } catch (err) {
+      console.log(err);
+    }
   };
   return (
     <Formik

@@ -53,7 +53,7 @@ function ListNotif() {
               eventKey="contact"
               title={
                 <h3>
-                  Pengiriman{" "}
+                  PENGIRIMAN
                   {kirimData?.filterData?.length > 0 && (
                     <GiPlainCircle color="red" />
                   )}
@@ -64,6 +64,10 @@ function ListNotif() {
             </Tab>
 
             <Tab eventKey="selesai" title="SELESAI">
+              <ParentSelesai />
+            </Tab>
+
+            <Tab eventKey="dibatalkan" title="DIBATALKAN">
               <ParentSelesai />
             </Tab>
           </Tabs>

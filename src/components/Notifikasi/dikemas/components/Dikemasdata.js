@@ -4,6 +4,7 @@ import ListDataDikemas from "./ListDataDikemas";
 import classes from "../../../checkout/components/cheoutdata.module.css";
 import { useNavigate } from "react-router-dom";
 function Dikemasdata({ file, dataAsli, selesaiData }) {
+  console.log(dataAsli, `wkwkw`);
   const navigate = useNavigate();
   const listproduks = dataAsli?.ordersData
     ? dataAsli.ordersData

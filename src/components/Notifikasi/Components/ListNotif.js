@@ -9,6 +9,7 @@ import Dikemas from "../dikemas/parentDikemas/Dikemas";
 import { useOrderData } from "../../shared/util/useOrderData";
 import ParentDelivery from "../delivery/ParentDelivery";
 import { ParentSelesai } from "../SelesaiProduk/ParentSelesaiPrduk/ParentSelesai";
+import { ParentGagal } from "../orderGagal/parentsGagalOrder/Pesanangagal";
 
 function ListNotif() {
   const { getCartsOrder } = useUSerhttp();
@@ -68,7 +69,7 @@ function ListNotif() {
             </Tab>
 
             <Tab eventKey="dibatalkan" title="DIBATALKAN">
-              <ParentSelesai />
+              <ParentGagal />
             </Tab>
           </Tabs>
         </div>

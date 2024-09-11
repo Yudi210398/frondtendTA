@@ -21,15 +21,18 @@ function Dikemas() {
         </div>
 
         {hasilData.length > 0 &&
-          hasilData.map((datas, i) => (
-            <Dikemasdata
-              key={i}
-              file={datas}
-              dataArray={hasilData}
-              dataAsli={data}
-              selesaiData={false}
-            />
-          ))}
+          hasilData.map((datas, i) => {
+            console.log(datas, `cak`);
+            return (
+              <Dikemasdata
+                key={i}
+                file={datas}
+                dataArray={hasilData}
+                dataAsli={data}
+                selesaiData={false}
+              />
+            );
+          })}
       </Container>
     </Fragment>
   );
